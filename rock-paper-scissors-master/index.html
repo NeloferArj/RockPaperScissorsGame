@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>RPS</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          <span>Rock</span>
+          <span>Paper</span>
+          <span>Scissors</span>
+        </h1>
+        <div class="score-container">
+          <h4>Score</h4>
+          <p id="score">0</p>
+        </div>
+      </header>
+      <main id="main">
+        <button class="btn-moves btn-paper" data-choice="paper">
+          <div class="circle circle-paper">
+            <span class="moves-wrapper">
+              <img src="./images/icon-paper.svg" alt="paper" />
+            </span>
+          </div>
+        </button>
+        <button class="btn-moves btn-scissors" data-choice="scissors">
+          <div class="circle circle-scissors">
+            <span class="moves-wrapper">
+              <img src="./images/icon-scissors.svg" alt="scissors" />
+            </span>
+          </div>
+        </button>
+        <button class="btn-moves btn-rock" data-choice="rock">
+          <div class="circle circle-rock">
+            <span class="moves-wrapper">
+              <img src="./images/icon-rock.svg" alt="rock" />
+            </span>
+          </div>
+        </button>
+
+        <div class="rules-modal" id="modal">
+          <div class="modal">
+            <img id="open" src="./images/image-rules.svg" alt="rules" />
+            <button id="close">
+              <img src="./images/icon-close.svg" alt="close" />
+            </button>
+          </div>
+        </div>
+        <button class="btn-rules" onclick="rules()">
+          Rules
+          <p id="demo"></p>
+        </button>
+      </main>
+      <div class="selection" id="selection">
+        <div>
+          <h2>You picked</h2>
+          <button class="btn-moves btn-scissors" id="user_select">
+            <span class="moves-wrapper">
+              <img src="./images/icon-scissors.svg" alt="scissors" />
+            </span>
+          </button>
+        </div>
+        <div class="go-down">
+          <p class="big-text">YOU <span id="winner">win</span></p>
+          <button class="btn" id="reset">Play again</button>
+        </div>
+        <div>
+          <h2>The house picked</h2>
+          <button class="btn-moves btn-paper" id="computer_select">
+            <span class="moves-wrapper">
+              <img src="./images/icon-paper.svg" alt="paper" />
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
