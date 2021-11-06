@@ -79,10 +79,6 @@ function updateScore(value){
 
 
 }
-// function rules() {
-//     document.getElementById("demo").innerHTML = "Hello World";
-//   }
-
 
 function updateSelection(selectionEl, choice){
     const img = selectionEl.querySelector('img');
